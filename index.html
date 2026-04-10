@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_Registration_System</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="">
+    <!-- Header -->
+    <header clss="">
+        <div class="text-center">
+        <h1 class="text-5xl">Student Registration System</h1>
+        <h3 class="text-2xl">Smart Student Data Management Platform</h3>
+        <p class="text-sm">(A simple and responsive system to register and manage student records efficiently.)</p>
+        </div>
+    </header>
+
+    <!-- Forn Section -->
+    <section>
+        <div class="bg-white shadow-md rounded-xl p-6 mt-6">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700"> Register Student </h2>
+            <form id="studentForm" class="grid grid-cols-1 md:grid-cols-2 gap-4" action="" >
+                <input class="border p-2 rounded-md focus:outline-blue-500" type="text" id="studentID" placeholder="Student ID" required pattern="[A-Za-z0-9 ]+">
+                <input class="border p-2 rounded-md focus:outline-blue-500" type="text" id="studentName" placeholder="Student Name" required pattern="[A-Za-z ]+">
+                <input class="border p-2 rounded-md focus:outline-blue-500" type="email" id="email" placeholder="Student email ID" required>
+                <input class="border p-2 rounded-md focus:outline-blue-500" type="text" id="contact" placeholder="Contact No." required maxlength="10" pattern="[0-9]{10}">
+
+                <button type="submit"> Add </button>
+            </form>
+            </div>
+    </section>
+
+
+    <!-- Display section -->
+    <section class="">
+        <h2>Registerd Student</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Student ID</th>
+                    <th>Email</th>
+                    <th>Contact No.</th>
+                    <th>Action</th>
+                </tr>
+                <tbody>
+
+                </tbody>
+            </thead>
+        </table>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
