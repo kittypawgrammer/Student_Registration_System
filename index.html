@@ -6,69 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration System</title>
 
+    <link href="./dist/output.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
 
     <!-- Header -->
-    <header>
-        <div >
-            <h1>
+    <header class="bg-cyan-900 text-white p-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-5xl font-bold pb-6">
                 Student Registration System
             </h1>
-            <h3>
+            <h3 class="text-2xl">
                 Smart Student Data Management Platform
             </h3>
 
-            <p>
+            <p class="mt-2 text-sm ">
                 (A simple and responsive system to register and manage student records efficiently.)
             </p>
         </div>
     </header>
 
     <!-- Main Section -->
-    <main>
+    <main class="max-w-6xl mx-auto p-6">
 
         <!-- Form Section -->
-        <section>
+        <section class="p-6  border rounded-lg shadow-md">
 
-            <h2>
+            <h2 class="text-2xl font-semibold mb-4">
                 Register Student
             </h2>
 
-            <form id="studentForm">
+            <form id="studentForm" class="grid grid-cols-1 gap-4">
 
                 <!-- Student ID -->
                 <div>
-                    <label>Student ID</label>
-                    <input type="text" id="studentId" placeholder="Enter ID" required
-                        pattern="[A-Za-z0-9 ]+">
+                    <label class=" block font-medium">Student ID</label>
+                    <input class="w-full p-2 border rounded " type="text" id="studentId" placeholder="Enter ID" required>
                 </div>
 
                 <!-- Name -->
                 <div class="">
-                    <label>Student Name:</label>
-                    <input type="text" id="name" placeholder="Enter student name"
-                        equired pattern="[A-Za-z ]+">
+                    <label class="block font-medium">Student Name</label>
+                    <input class="w-full p-2 border rounded" type="text" id="name" placeholder="Enter student name">
                 </div>
 
 
                 <!-- Email -->
                 <div>
-                    <label>Email</label>
-                    <input type="email" id="email" placeholder="Enter email" required>
+                    <label class="block font-medium">Email</label>
+                    <input class="w-full p-2 border rounded" type="email" id="email" placeholder="Enter email" required>
                 </div>
 
                 <!-- Contact -->
                 <div>
-                    <label>Contact Number</label>
-                    <input type="text" id="contact" placeholder="Enter contact"
-                        required pattern="[0-9 {10}]">
+                    <label class="block font-medium">Contact Number</label>
+                    <input class="w-full p-2 border rounded" type="text" id="contact" placeholder="Enter contact">
                 </div>
 
                 <!-- Button -->
 
-                <button type="submit">
+                <button class="bg-cyan-800 w-36 h-auto text-white px-6 py-2 rounded hover:bg-green-600" type="submit" onclick="submitForm(this.form)">
                     Add Student
                 </button>
 
@@ -76,26 +74,26 @@
         </section>
 
         <!-- Display Section -->
-        <section>
+        <section class="p-6 mt-6 border rounded-lg">
 
-            <h2>
+            <h2 class="text-2xl font-semibold mb-4">
                 Registered Students
             </h2>
 
-            <div>
-                <table>
+            <div class="overflow-y-auto max-h-80">
+                <table class="w-full border">
 
-                    <thead>
+                    <thead class="bg-cyan-800 text-white">
                         <tr>
-                            <th>Name</th>
-                            <th>ID</th>
-                            <th>Email</th>
-                            <th>Contact</th>
-                            <th>Actions</th>
+                            <th class="p-2">Name</th>
+                            <th class="p-2">ID</th>
+                            <th class="p-2">Email</th>
+                            <th class="p-2">Contact</th>
+                            <th class="p-2">Actions</th>
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody id="studentTable" class="text-center">
                     </tbody>
 
                 </table>
