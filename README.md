@@ -55,14 +55,14 @@ student-registration-system/
 
 ├── index.html
 ├── js/
-│   └── app.js
-├── src/
+│   └── script.js
+├── css/
 │   └── input.css
 ├── dist/
 │   └── output.css
 ├── README.md
 ├── package.json
-├── tailwind.config.js
+├── package-lock.json
 └── .gitignore
 
 ---
@@ -119,30 +119,8 @@ Open **index.html** in your browser.
 
 ---
 
-## 📱 Responsive Design
 
-The system is fully responsive across:
 
-* Mobile (≤ 640px)
-* Tablet (641px – 1024px)
-* Desktop (≥ 1025px)
-
----
-
-## 🔧 Git Commit Structure
-
-This project follows a proper Git commit structure as required in the assignment.
-
-### Commits
-
-* added HTML structure
-* added tailwind css
-* added javascript functionality
-* added documentation
-
-Each component was committed separately to maintain proper version control and project organization.
-
----
 
 
 
