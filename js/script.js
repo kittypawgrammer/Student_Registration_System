@@ -63,10 +63,10 @@ function displayStudents() {
     students.forEach((student, index) => {
         tableData.innerHTML += `
         <tr>
-            <td class="px-2 items-center">${student.name}</td>
-            <td class="px-2 items-center">${student.studentId}</td>
-            <td class="px-2 items-center">${student.email}</td>
-            <td class="px-2 items-center">${student.contact}</td>
+            <td class="px-2 text-center">${student.name}</td>
+            <td class="px-2 text-center">${student.studentId}</td>
+            <td class="px-2 text-center">${student.email}</td>
+            <td class="px-2 text-center">${student.contact}</td>
             <td class="flex gap-2 justify-center">
             <button 
                 class="bg-amber-300 text-black px-4 py-2  my-3 rounded-lg shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 font-medium"
