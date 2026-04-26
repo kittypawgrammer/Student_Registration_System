@@ -7,10 +7,16 @@ document.getElementById("studentForm").addEventListener("submit", submitForm);
 
 function isDuplicate(studentId, email) {
     let students = JSON.parse(localStorage.getItem("students")) || [];
-    for (let student of students) {
+
+    for (let i = 0; i < students.length; i++) {
+        if (i === editIndex) continue;
+
+        let student = students[i];
+
         if (student.studentId && student.studentId.toLowerCase() === studentId.toLowerCase()) {
             return `Student ID "${studentId}" already exists`;
         }
+
         if (student.email && student.email.toLowerCase() === email.toLowerCase()) {
             return `Email "${email}" already exists`;
         }
@@ -34,7 +40,12 @@ function submitForm(e) {
 
     let students = JSON.parse(localStorage.getItem("students")) || [];
 
-    students.push(newStudent);
+    if (editIndex === -1) {
+        students.push(newStudent);
+    } else {
+        students[editIndex] = newStudent;
+        editIndex = -1;
+    }
 
     localStorage.setItem("students", JSON.stringify(students));
 
@@ -82,9 +93,9 @@ function displayStudents() {
         </td>
         </tr>`;
     });
-    
-// Scrollbar logic
-    if (students.length > 5) {
+
+    // Scrollbar logic
+    if (students.length > 4) {
         document.getElementById("tableContainer").style.height = "300px";
         document.getElementById("tableContainer").style.overflowY = "scroll";
     } else {
@@ -124,7 +135,9 @@ function editStudent(index) {
     document.querySelector('[name="email"]').value = student.email;
     document.querySelector('[name="contact"]').value = student.contact;
 
-    deleteStudent(index);
+    editIndex = index;
+
+    displayStudents(index);
 }
 
 
