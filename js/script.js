@@ -1,5 +1,6 @@
 
-//  Student Registration System - Main JavaScript
+//  Student Registration System 
+let editIndex = -1;
 
 document.getElementById("studentForm").addEventListener("submit", submitForm);
 
